@@ -1,0 +1,101 @@
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*Header*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+header h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3em;
+    margin: 0em 0em 0em 2em;
+}
+
+
+#logo {
+    width: 20%;
+}
+
+#zoeken {
+    width: 5%;
+    margin: 1% 0% 0% 65%;
+}
+
+#profiel {
+    width: 5.5%;
+    margin: 1% 0% 0% 5%;
+    margin: 1% 0% 0% 3%;
+}
+
+/*Filter opties*/
+h1 {
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    margin: 1.4vh;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul li {
+    border-style: solid;
+    color: #80CC27;
+    background-color: #80CC27;
+    border-radius: 10px;
+    padding: 1em 1.3em;
+    font-family: 'Titillium Web', sans-serif;
+
+}
+
+ul li a {
+    font-size: 2.4em;
+    margin: 0;
+    color: black;
+}
+
+/*Article1*/
+article a img {
+    margin: 3em 3em 0.1em;
+    padding: 0;
+}
+
+article h2 {
+    margin: .4vh 0vh 0.5vh 3vh;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2em;
+}
+
+article p {
+    padding: 0;
+    margin: 0vh 0.4vh 0vh 3vh;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/*Article2*/
+#halloweenparty {
+    width: 98%;
+    margin: 5.5vh 0vh 0.5vh 2.8vh
+}
+
+/*Article3*/
+#verkleedfeestje {
+    width: 98%;
+    margin: 5.5vh 0vh 0.5vh 2.8vh;
+}
+
+#spookhuis {
+    width: 98%;
+    margin: 5.5vh 0vh 0.5vh 2.8vh;
+}
