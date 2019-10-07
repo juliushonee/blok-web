@@ -6,55 +6,58 @@ body {
     margin: 0;
 }
 
+/*Header*/
 a {
     text-decoration: none;
 }
 
-
-
-/*Header*/
-#logo {
-    width: 30%;
-    margin: .5em 0 0 .5em;
-}
-
-#zoeken {
-    width: 8%;
-    margin: .5em 0 0 12em;
-}
-
-#profiel {
-    width: 8%;
-    margin: 0.2em 0 0 1em;
-}
-
-/*Navigatie/filter*/
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0 1em;
-}
-
-nav ul li {
+li {
     list-style-type: none;
 }
 
-nav ul li a {
-    color: black;
+header nav ul {
+    margin: .5em;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#logo {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    right: auto;
+}
+
+#zoeken {
+    width: 60%;
+}
+
+#profiel {
+    width: 60%;
+}
+
+/*filter*/
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 92%;
+}
+
+form input {
+    visibility: hidden;
+    margin: 0;
+}
+
+form label {
     font-family: 'Titillium Web', sans-serif;
+    font-weight: bolder;
+    margin: 0;
 }
 
-nav ul li a:hover {
-    color: #80CC27;
-}
-
-nav ul li a:active {
-    /*wat voor :... moet hier komen om daarvoor te zorgen*/
-}
-
-/*H1*/
+/*Evenementen vinden*/
 h1 {
     text-align: center;
     font-family: 'Archivo Black', sans-serif;
@@ -62,24 +65,28 @@ h1 {
     margin: .25em;
 }
 
-/*Article 1*/
+/*Evenementen*/
+
+
 article {
     width: 92%;
     background-color: #E8E7E7;
     border-radius: 5px;
-    margin: 1em
+    margin: 1em;
 }
 
 h2 {
     font-family: 'Archivo Black', sans-serif;
     font-size: 1em;
-    margin: .25em 1em
+    margin: .25em 1em;
+    padding: .1em 0 0.1em
 }
 
 p {
     font-family: 'Titillium Web', sans-serif;
     font-size: 0.85em;
     margin: .25em 1em 1em;
+    padding: 0 0 0.5em;
 }
 
 main article a img {
@@ -90,9 +97,8 @@ main article a img {
 
 /*Slideshow*/
 article div {
-    border-radius: 5px 5px 0 0
+    border-radius: 5px;
 }
-
 
 #slideshow {
     width: 100%;
@@ -105,7 +111,49 @@ div img {
     flex-shrink: 0;
 }
 
-div h2 {
-    font-size: 2em;
-    margin: 10em
+/*Mediaqueries*/
+
+@media (min-width:40em) {
+    #logo {
+        max-width: 30em;
+    }
+
+    #zoeken {
+        max-width: 4em;
+    }
+
+    #profiel {
+        max-width: 4em;
+    }
+
+    form {
+        max-width: 20em;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/*
+@media (min-width:50em) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+*/
+
+@media (min-width:60em) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 75em) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
