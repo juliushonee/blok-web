@@ -19,7 +19,7 @@ header nav ul {
     margin: .5em;
     padding: 0;
     display: flex;
-    flex-direction: row;
+    /*    flex-direction: row;*/
 }
 
 
@@ -44,17 +44,33 @@ form {
     flex-direction: row;
     justify-content: space-between;
     width: 92%;
+    background-color: #e8e7e7;
+    padding: .5em 1em;
+    border-radius: 5px;
+}
+
+#filter {
+    margin: 1em;
 }
 
 form input {
     visibility: hidden;
-    margin: 0;
+    margin: -3.5em;
 }
 
 form label {
     font-family: 'Titillium Web', sans-serif;
     font-weight: bolder;
     margin: 0;
+
+}
+
+form label:hover {
+    color: #91c34c;
+}
+
+form label:focus {
+    text-decoration: underline;
 }
 
 /*Evenementen vinden*/
@@ -127,7 +143,12 @@ div img {
     }
 
     form {
-        max-width: 20em;
+        max-width: 30em;
+    }
+
+    #filter {
+        margin: auto;
+
     }
 
     main {
@@ -135,16 +156,14 @@ div img {
         grid-template-columns: 1fr 1fr;
     }
 
-}
+    main article:nth-of-type(5) {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 2;
+        grid-row-end: span 1;
 
-/*
-@media (min-width:50em) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
     }
 }
-*/
 
 @media (min-width:60em) {
     main {
