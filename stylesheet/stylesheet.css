@@ -156,6 +156,7 @@ div img {
         grid-template-columns: 1fr 1fr;
     }
 
+    /*Bron: https://css-tricks.com/snippets/css/complete-guide-grid/*/
     main article:nth-of-type(5) {
         grid-column-start: 1;
         grid-column-end: span 2;
