@@ -1,3 +1,8 @@
+/*Even kijken naar de H2 van de slideshow*/
+/*Bedenken of ik alle images even groot wil maken*/
+/*Filter faken*/
+/*Nadenken over micro interacties + doen (zoekbalk?)*/
+
 * {
     box-sizing: border-box;
 }
@@ -19,16 +24,30 @@ header nav ul {
     margin: .5em;
     padding: 0;
     display: flex;
-    /*    flex-direction: row;*/
 }
 
+header nav li:nth-of-type(2) {
+    margin-left: auto;
+}
 
-#logo {
+header nav ul li img:nth-of-type(1) {
     width: 30%;
     margin: 0;
     padding: 0;
     right: auto;
 }
+
+/*
+header nav ul li a img:nth-last-of-type(2) {
+    width: 60%;
+}
+
+
+header nav ul li a img:nth-of-type(3) {
+    width: 60%;
+}
+*/
+
 
 #zoeken {
     width: 60%;
@@ -83,12 +102,15 @@ h1 {
 
 /*Evenementen*/
 
+main {
+    margin: 1em;
+}
+
 
 article {
-    width: 92%;
+    width: 100%;
     background-color: #E8E7E7;
     border-radius: 5px;
-    margin: 1em;
 }
 
 h2 {
@@ -97,6 +119,8 @@ h2 {
     margin: .25em 1em;
     padding: .1em 0 0.1em
 }
+
+
 
 p {
     font-family: 'Titillium Web', sans-serif;
@@ -154,6 +178,7 @@ div img {
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-gap: 1.25em;
     }
 
     /*Bron: https://css-tricks.com/snippets/css/complete-guide-grid/*/
