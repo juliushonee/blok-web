@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="stylesheet/stylesheet.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
-
     </style>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
-
     </style>
 </head>
 
-<body>
+<body class="filtered">
 
     <header>
         <nav>
@@ -26,14 +24,16 @@
                 <li><a href="#"><img id=profiel src="images/man-user.svg" alt="profiel"></a></li>
             </ul>
         </nav>
+
+        <h1>Evenementen vinden</h1>
     </header>
 
-    <h1>Evenementen vinden</h1>
+
 
     <form id=filter action="index.html" method="get">
         <input id="pop" type="radio" name="category" value="Pop">
         <label for="pop">Pop</label>
-        <input id="dance" type="radio" name="category" value="Dance">
+        <input id="dance" type="radio" name="category" value="Dance" checked="checked">
         <label for="dance">Dance</label>
         <input id="r&b" type="radio" name="category" value="R&B">
         <label for="r&b">R&B</label>
@@ -41,11 +41,13 @@
         <label for="kinderen">Kinderen</label>
         <input id="populair" type="radio" name="category" value="Populair">
         <label for="populair">Populair</label>
-
+        <button>Filter</button>
     </form>
 
 
     <main>
+        <h2>Evenementen</h2>
+
 
         <!--Bron afbeelding: http://sellingpix.com/downloads/halloween-festival-typography-vintage-vector-design-poster-template-retro-style-flyer/-->
         <article>
@@ -102,6 +104,5 @@
 
 
     </main>
-</body>
-
-</html>
+    <script src="javascript/javascript.js"></script>
+</body></html>

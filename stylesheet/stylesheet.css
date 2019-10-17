@@ -30,11 +30,13 @@ header nav li:nth-of-type(2) {
     margin-left: auto;
 }
 
-header nav ul li img:nth-of-type(1) {
+header nav ul li:nth-of-type(1) img {
     width: 30%;
     margin: 0;
     padding: 0;
     right: auto;
+
+    /border: 1px solid red
 }
 
 /*
@@ -47,6 +49,7 @@ header nav ul li a img:nth-of-type(3) {
     width: 60%;
 }
 */
+/*Hoezo werkt dit niet?*/
 
 
 #zoeken {
@@ -84,12 +87,39 @@ form label {
 
 }
 
+body.filtered main {
+    animation: bringToTop .5s;
+}
+
+@keyframes bringToTop {
+    0% {
+        transform: translateY(100vh)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
 form label:hover {
     color: #91c34c;
 }
 
 form label:focus {
     text-decoration: underline;
+}
+
+form label.active {
+    background-color: green;
+}
+
+input:checked + label {
+    background-color: #ccc;
+}
+
+form button {
+    position: absolute;
+    left: -666em;
 }
 
 /*Evenementen vinden*/
@@ -106,6 +136,10 @@ main {
     margin: 1em;
 }
 
+main h2 {
+    position: absolute;
+    left: -666em;
+}
 
 article {
     width: 100%;
@@ -144,11 +178,13 @@ article div {
     width: 100%;
     display: flex;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
 }
 
 div img {
     width: 100%;
     flex-shrink: 0;
+    scroll-snap-align: start;
 }
 
 /*Mediaqueries*/

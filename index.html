@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="stylesheet/stylesheet.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
-
     </style>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
-
     </style>
 </head>
 
@@ -21,29 +19,33 @@
     <header>
         <nav>
             <ul>
+                <!--Bron van de iconen neerzetten-->
                 <li><a href="#"><img id=logo src="images/538logo.png" alt="538 logo"></a></li>
                 <li><a href="#"><img id=zoeken src="images/search%20(1).svg" alt="zoeken"></a></li>
                 <li><a href="#"><img id=profiel src="images/man-user.svg" alt="profiel"></a></li>
             </ul>
         </nav>
+        <h1>Evenementen vinden</h1>
     </header>
 
-    <h1>Evenementen vinden</h1>
 
-    <form id=filter action="index.html" method="get">
+
+    <form id=filter action="index-filtered.html" method="get">
         <input id="pop" type="radio" name="category" value="Pop">
         <label for="pop">Pop</label>
         <input id="dance" type="radio" name="category" value="Dance">
         <label for="dance">Dance</label>
         <input id="r&b" type="radio" name="category" value="R&B">
-        <label for="r&b">R&B</label>
+        <label for="r&b">R&amp;B</label>
         <input id="kinderen" type="radio" name="category" value="Kinderen">
         <label for="kinderen">Kinderen</label>
         <input id="populair" type="radio" name="category" value="Populair">
         <label for="populair">Populair</label>
+        <button>Filter</button>
     </form>
 
     <main>
+        <h2>Evenementen</h2>
         <!--Afbeelding bron:http://www.grnow.com/event/pumpkin-carving-party-grand-rapids-2/-->
         <article>
             <a href="#"><img src="images/evenement1.jpg" alt="Pumpkin Party"></a>
@@ -68,6 +70,7 @@
                 <img src="images/slide4.jpg" alt="Disneyland Halloween">
             </div>
 
+
         </article>
 
         <!--Bron afbeelding: https://nl.freepik.com/vrije-vector/platte-ontwerp-van-halloween-kind-collectie_5480270.htm-->
@@ -86,6 +89,5 @@
 
 
     </main>
-</body>
-
-</html>
+    <script src="javascript/javascript.js"></script>
+</body></html>
