@@ -1,8 +1,3 @@
-/*Even kijken naar de H2 van de slideshow*/
-/*Bedenken of ik alle images even groot wil maken*/
-/*Filter faken*/
-/*Nadenken over micro interacties + doen (zoekbalk?)*/
-
 * {
     box-sizing: border-box;
 }
@@ -35,30 +30,16 @@ header nav ul li:nth-of-type(1) img {
     margin: 0;
     padding: 0;
     right: auto;
-
-    /border: 1px solid red
 }
 
-/*
-header nav ul li a img:nth-last-of-type(2) {
+header nav ul li:nth-of-type(2) img {
     width: 60%;
 }
 
-
-header nav ul li a img:nth-of-type(3) {
-    width: 60%;
-}
-*/
-/*Hoezo werkt dit niet?*/
-
-
-#zoeken {
+header nav ul li:nth-of-type(3) img {
     width: 60%;
 }
 
-#profiel {
-    width: 60%;
-}
 
 /*filter*/
 form {
@@ -84,7 +65,6 @@ form label {
     font-family: 'Titillium Web', sans-serif;
     font-weight: bolder;
     margin: 0;
-
 }
 
 body.filtered main {
@@ -114,7 +94,7 @@ form label.active {
 }
 
 input:checked + label {
-    background-color: #ccc;
+    background-color: #91c34c;
 }
 
 form button {
@@ -154,11 +134,18 @@ h2 {
     padding: .1em 0 0.1em
 }
 
+main article h2 {
+    position: relative;
+    left: 0em;
+}
 
 
 p {
     font-family: 'Titillium Web', sans-serif;
     font-size: 0.85em;
+}
+
+main article p {
     margin: .25em 1em 1em;
     padding: 0 0 0.5em;
 }
@@ -167,6 +154,150 @@ main article a img {
     width: 100%;
     margin: 0;
     border-radius: 5px 5px 0 0;
+}
+
+
+/*Articles detailpagina*/
+main.halloweendance {
+    width: 100vw;
+}
+
+main article.detailpagina {
+    margin: 1em 0 0;
+}
+
+article ol {
+    margin: 0;
+    padding: 0em;
+}
+
+article.detailpagina {
+    background-color: white;
+    width: 92%;
+    margin: 0;
+    padding: 0;
+}
+
+article.detailpagina img {
+    width: 108%;
+    margin: 0;
+}
+
+article.detailpagina section h2 {
+    position: absolute;
+    margin: -666em;
+}
+
+main article.detailpagina p {
+    margin: 0;
+    font-size: 1em
+}
+
+article.detailpagina ol li {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2em
+}
+
+
+/*Evenement details*/
+section:nth-child(2) {
+    display: grid;
+    grid-template-columns: 4em 17em 20em;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+section h3 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.3em;
+    margin: 1.2em 0 1em;
+    padding: .1em 0 0.1em;
+    grid-row: 7/7;
+    grid-column: 1/ span 2;
+}
+
+h3:nth-child(1) {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.3em;
+    margin: 1.2em 0 1em;
+    padding: .1em 0 0.1em;
+    grid-row: 2/2;
+    grid-column: 1/ span 2;
+}
+
+section div {
+    background-color: lightgrey;
+    height: 60%;
+    width: 23em;
+    grid-row: 8;
+    grid-column: 1/ span 2;
+}
+
+section div div {
+    background-color: #69277e;
+    height: 100%;
+    width: 75%;
+}
+
+p:nth-child(13) {
+    font-size: .8em;
+    grid-row: 9;
+    grid-column: 1/ span 2;
+    margin: -1.5em 0
+}
+
+img:nth-child(3) {
+    grid-column: 1/2;
+    margin: .7em 0;
+}
+
+img:nth-child(5) {
+    margin: .7em 0;
+    grid-column: 1/2;
+}
+
+img:nth-child(7) {
+    margin: .2em 0;
+    grid-column: 1/2;
+}
+
+img:nth-child(9) {
+    margin: .6em 0;
+    grid-column: 1/2;
+}
+
+a:nth-child(2) {
+    font-size: 1.3em;
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
+    background-color: #91c34c;
+    margin: 0.8em 0 0;
+    padding: .5em;
+    text-align: center;
+    grid-column: 1/ span 2;
+}
+
+a:nth-child(2):hover {
+    color: black;
+}
+
+section p {
+    font-size: 1.2em;
+    margin: .3em 0;
+}
+
+section a {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2em;
+    margin: .4em 0;
+    color: black;
+}
+
+section a:hover {
+    color: #69277e;
+}
+
+section img {
+    width: 50%;
 }
 
 /*Slideshow*/
@@ -190,15 +321,15 @@ div img {
 /*Mediaqueries*/
 
 @media (min-width:40em) {
-    #logo {
+    header nav ul li:nth-of-type(1) img {
         max-width: 30em;
     }
 
-    #zoeken {
+    header nav ul li:nth-of-type(2) img {
         max-width: 4em;
     }
 
-    #profiel {
+    header nav ul li:nth-of-type(3) img {
         max-width: 4em;
     }
 
@@ -211,30 +342,80 @@ div img {
 
     }
 
-    main {
+    main#grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1.25em;
     }
 
-    /*Bron: https://css-tricks.com/snippets/css/complete-guide-grid/*/
-    main article:nth-of-type(5) {
+    article:nth-child(4) {
         grid-column-start: 1;
         grid-column-end: span 2;
         grid-row-start: 2;
         grid-row-end: span 1;
-
     }
 }
 
 @media (min-width:60em) {
-    main {
+    main#grid {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    article.detailpagina {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 40em 27em;
+        grid-template-rows: 2em 1fr;
+    }
+
+    article.detailpagina h1 {
+        text-align: left;
+    }
+
+    article.detailpagina img {
+        max-width: 40em;
+        grid-column: 1/2;
+    }
+
+    article.detailpagina section {
+        max-width: 27em;
+        margin-left: 1em;
+    }
+
+    section h3 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 1.3em;
+        margin: 1.2em 0 1em;
+        padding: .1em 0 0.1em;
+        grid-row: 2/2;
+        grid-column: 4/ span 2;
+    }
+
+
+    section div {
+        background-color: lightgrey;
+        height: 60%;
+        width: 23em;
+        grid-row: 3;
+        grid-column: 4/ span 5;
+    }
+
+    section div div {
+        background-color: #69277e;
+        height: 100%;
+        width: 75%;
+    }
+
+    p:nth-child(13) {
+        font-size: .8em;
+        grid-row: 4;
+        grid-column: 4/ span 5;
+        margin: -1.5em 0
     }
 }
 
 @media (min-width: 75em) {
-    main {
+    main#grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
