@@ -40,26 +40,6 @@ header nav ul li:nth-of-type(3) img {
     width: 60%;
 }
 
-main article:hover {
-    animation: pulse .5s forwards;
-    transition: .8s;
-}
-
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.05);
-    }
-
-    0% {
-        transform: scale(1);
-    }
-}
-
 
 /*filter*/
 form {
@@ -132,10 +112,30 @@ h1 {
 }
 
 /*Evenementen*/
-
 main {
     margin: 1em;
 }
+
+main article:hover {
+    animation: pulse .5s forwards;
+    transition: .8s;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+
+    0% {
+        transform: scale(1);
+    }
+}
+
 
 main h2 {
     position: absolute;
@@ -179,6 +179,7 @@ main article a img {
 
 
 /*Articles detailpagina*/
+
 main.halloweendance {
     width: 100vw;
 }
