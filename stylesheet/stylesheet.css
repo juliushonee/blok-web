@@ -121,6 +121,10 @@ main article:hover {
     transition: .8s;
 }
 
+article.detailpagina:hover {
+    animation: none !important;
+}
+
 
 @keyframes pulse {
     0% {
@@ -132,6 +136,16 @@ main article:hover {
     }
 
     0% {
+        transform: scale(1);
+    }
+}
+
+@keyframes geenpulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
         transform: scale(1);
     }
 }
